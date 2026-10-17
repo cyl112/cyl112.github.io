@@ -27,7 +27,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cat site.zip.001 site.zip.002 > site.zip
+          cat site.zip.00* > site.zip
           sha256sum --check site.zip.sha256
           unzip -q site.zip -d _site
           test -f _site/index.html
